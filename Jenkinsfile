@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+        label "docker-slave"
+    }
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
