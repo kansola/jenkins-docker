@@ -12,7 +12,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'docker build -t oyinkz/jenkins-docker-hub .'
-        sleep 30
+        sleep 300
       }
     }
     stage('Login') {
