@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sleep 300
+        
         sh 'docker build -t oyinkz/jenkins-docker-hub .'
         
       }
@@ -28,7 +28,7 @@ pipeline {
       steps {
         script {
           kubernetesDeploy(configs: "deploymentservice.yml", kubeconfigId: "kubernetes")
-          sleep 30
+          
           
         }
       }
